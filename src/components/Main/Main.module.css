@@ -1,0 +1,25 @@
+.mainSection {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.main {
+  flex: 4;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: aquamarine;
+}
+
+@media screen and (max-width: 600px) {
+  .mainSection {
+    flex-direction: column-reverse;
+  }
+
+  .sidebar {
+    min-height: 100px;
+    background-color: aquamarine;
+  }
+}

@@ -1,0 +1,76 @@
+.disabled {
+  display: none;
+}
+.message {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.tableContainer {
+  margin-left: 10px;
+}
+
+.tableContainer table {
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.tableContainer table th,
+.tableContainer table td:first-child {
+  background: #c6e5ed;
+  color: var(--main-text-color);
+  padding: 10px 10px;
+}
+.tableContainer table th,
+.tableContainer table td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: white;
+  color: var(--main-text-color);
+}
+
+.tableContainer table td:not(:first-child) {
+  padding: 0 10px;
+}
+
+.tableContainer table td {
+  background: #d8e6f3;
+}
+
+.tableContainer table th:first-child,
+.tableContainer table td:first-child {
+  text-align: left;
+}
+
+.del {
+  background-color: transparent !important;
+  width: 60px;
+}
+
+.deleteBtn {
+  border: none;
+  outline: none;
+  background: none;
+  margin-left: -10px;
+  margin-right: 10px;
+  width: 25px;
+  height: 38px;
+}
+
+@media screen and (max-width: 480px) {
+  .tableContainer table {
+    font-size: 12px;
+  }
+
+  .tableContainer table th,
+  .tableContainer table td:first-child {
+    padding: 5px 5px;
+    font-size: 10px;
+  }
+  .del {
+    width: 5px;
+  }
+}

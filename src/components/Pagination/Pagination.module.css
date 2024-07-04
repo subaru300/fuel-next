@@ -1,0 +1,23 @@
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px 10px;
+  gap: 10px;
+}
+
+.paginationWrapper button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.paginationWrapper p {
+  font-size: 14px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+}

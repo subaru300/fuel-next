@@ -1,0 +1,50 @@
+import { IEnteredData } from '@/interface/interface';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+
+const initialState: IEnteredData[] = [
+  {
+    id: '1',
+    date: 'test',
+    distance: 320,
+    consumption: 6.5,
+    cost: 59,
+    reqFuel: 999,
+    costFuel: 999,
+  },
+  {
+    id: '2',
+    date: 'test',
+    distance: 320,
+    consumption: 6.5,
+    cost: 59,
+    reqFuel: 999,
+    costFuel: 999,
+  },
+  {
+    id: '3',
+    date: 'test',
+    distance: 320,
+    consumption: 6.5,
+    cost: 59,
+    reqFuel: 999,
+    costFuel: 999,
+  },
+];
+
+export const fuelDataSlice = createSlice({
+  name: 'fuel',
+  initialState,
+  reducers: {
+    addData: (state, action: PayloadAction<IEnteredData>) => {
+      state.push(action.payload);
+    },
+    removeData: (state, action: PayloadAction<string>) => {
+      return state.filter(item => item.id !== action.payload);
+    },
+  },
+});
+
+export const { addData, removeData } = fuelDataSlice.actions;
+
+export default fuelDataSlice.reducer;

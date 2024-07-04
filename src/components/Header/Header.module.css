@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  gap: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.headerLogoBlock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.headerTextBlock {
+  font-weight: 300;
+  color: var(--main-text-color);
+}
+
+.headerTextBlock h1 {
+  font-size: 24px;
+}
+
+.headerNav ul li {
+  display: flex;
+  gap: 10px;
+}
+
+.headerNav a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+@media screen and (max-width: 480px) {
+  .headerTextBlock h1 {
+    font-size: 18px;
+  }
+}
