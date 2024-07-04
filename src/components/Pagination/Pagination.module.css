@@ -15,9 +15,11 @@
 
 .paginationWrapper p {
   font-size: 14px;
+  color: var(--basic-text-color);
 }
 
 .arrow {
   width: 20px;
   height: 20px;
+  color: var(--basic-text-color);
 }

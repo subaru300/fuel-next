@@ -10,20 +10,23 @@ input::-webkit-inner-spin-button {
 }
 
 :root {
-  --main-bg-color: ;
+  --head-bg-color: #010408;
+  --main-bg-color: #0c1117;
   --main-text-color: rgb(96, 96, 96);
+  --basic-text-color: #f0f0f0;
+  --dark-text-color: #484451;
+  --button-color: #18e68e;
+  --input-color: #eff1f8;
+  --bg-color: #3b404a;
+  --bg-color-dark: #1f232b;
+  --accent-color: #b047cf;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(237, 237, 237);
-  background: radial-gradient(
-    circle,
-    rgb(245, 245, 245) 0%,
-    rgb(221, 221, 221) 100%
-  );
+  background: #000000;
 }
 
 .wrapper {
@@ -40,7 +43,7 @@ body {
   display: flex;
   position: relative;
   height: 100vh;
-  color: var(--main-text-color);
+  color: var(--basic-text-color);
 }
 
 .page404__center {
@@ -64,5 +67,9 @@ body {
 @media screen and (max-width: 750px) {
   .wrapper {
     height: 100%;
+  }
+
+  .page404 h1 {
+    font-size: 16px;
   }
 }

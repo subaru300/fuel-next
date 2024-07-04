@@ -20,7 +20,7 @@ const Page404 = () => {
         <h1>
           Page not found
           <span className='span' />
-          Error 404
+          404
         </h1>
         <p>You will be redirected to the main page in 3 sec.</p>
       </div>

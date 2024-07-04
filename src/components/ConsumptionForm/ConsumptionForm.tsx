@@ -1,12 +1,10 @@
 'use client';
 
 import styles from './ConsumbtionForm.module.css';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 const ConsumptionForm = () => {
   const [result, setResult] = useState<number>(0);
-
-  const formRef = useRef<HTMLFormElement>(null);
 
   const onCalculateHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -21,18 +19,10 @@ const ConsumptionForm = () => {
     const consumption = (litersNum / distanceNum) * 100;
 
     setResult(consumption);
-
-    if (formRef.current) {
-      formRef.current.reset();
-    }
   };
 
   return (
-    <form
-      className={styles.calcForm}
-      onSubmit={onCalculateHandler}
-      ref={formRef}
-    >
+    <form className={styles.calcForm} onSubmit={onCalculateHandler}>
       <div className={styles.inputsBlock}>
         <div>
           <label htmlFor='liters'>I fill up the fuel (liters):</label>
@@ -58,10 +48,14 @@ const ConsumptionForm = () => {
             required
           />
         </div>
-
-        <button className={styles.submitBtn} type='submit'>
-          Calculate
-        </button>
+        <div className={styles.buttonGroup}>
+          <button className={styles.submitBtn} type='submit'>
+            Calculate
+          </button>
+          <button className={styles.resetBtn} type='reset'>
+            Reset
+          </button>
+        </div>
       </div>
       <div className={styles.resultBlock}>
         <p>

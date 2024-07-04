@@ -1,8 +1,8 @@
-import { IResult } from '@/interface/interface';
-import { addData } from '@/lib/features/fuelData/fuelDataSlice';
+import { useState } from 'react';
 import { useAppDispatch } from '@/lib/hooks';
-import { useRef, useState } from 'react';
+import { addData } from '@/lib/features/fuelData/fuelDataSlice';
 import { v4 as uuidv4 } from 'uuid';
+import { IResult } from '@/interface/interface';
 import styles from './ReqForm.module.css';
 
 const ReqForm = () => {
@@ -15,8 +15,6 @@ const ReqForm = () => {
     calculateRequiredFuel: 0,
     calculateCost: 0,
   });
-
-  const formRef = useRef<HTMLFormElement>(null);
 
   const onCalculateHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -53,18 +51,10 @@ const ReqForm = () => {
         costFuel: calculateCost,
       })
     );
-
-    if (formRef.current) {
-      formRef.current.reset();
-    }
   };
 
   return (
-    <form
-      className={styles.calcForm}
-      onSubmit={onCalculateHandler}
-      ref={formRef}
-    >
+    <form className={styles.calcForm} onSubmit={onCalculateHandler}>
       <div className={styles.inputsBlock}>
         <div>
           <label htmlFor='date'>Date</label>
@@ -115,9 +105,15 @@ const ReqForm = () => {
             required
           />
         </div>
-        <button className={styles.submitBtn} type='submit'>
-          Calculate
-        </button>
+        <div className={styles.buttonGroup}>
+          {' '}
+          <button className={styles.submitBtn} type='submit'>
+            Calculate
+          </button>
+          <button className={styles.resetBtn} type='reset'>
+            Reset
+          </button>
+        </div>
       </div>
       <div className={styles.resultBlock}>
         <div>
