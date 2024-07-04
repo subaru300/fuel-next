@@ -106,7 +106,6 @@ const ReqForm = () => {
           />
         </div>
         <div className={styles.buttonGroup}>
-          {' '}
           <button className={styles.submitBtn} type='submit'>
             Calculate
           </button>
