@@ -53,6 +53,7 @@ const Table = () => {
           }
         >
           <table>
+            <caption>Your fuel statistics</caption>
             <thead>
               <tr>
                 <th>Date</th>

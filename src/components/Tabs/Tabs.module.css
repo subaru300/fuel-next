@@ -22,3 +22,9 @@
   color: #f6fbff !important;
   font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+  .calcButtons {
+    margin-left: 5px;
+  }
+}

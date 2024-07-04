@@ -2,7 +2,7 @@
   margin: 0 -5px;
   background: radial-gradient(
     circle,
-    rgba(173, 255, 252, 1) 0%,
+    rgb(103, 255, 250) 0%,
     rgb(186, 227, 239) 100%
   );
   border-radius: 4px;
@@ -123,7 +123,8 @@
   .resultBlock {
     width: 100%;
   }
-}
 
-@media screen and (max-width: 480px) {
+  .resultBlock > p {
+    font-size: 16px;
+  }
 }

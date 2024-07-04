@@ -1,3 +1,9 @@
 .calc {
   margin: 15px;
 }
+
+@media screen and (max-width: 600px) {
+  .calc {
+    margin: 15px 0;
+  }
+}

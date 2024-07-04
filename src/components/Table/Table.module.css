@@ -18,11 +18,18 @@
   border-collapse: collapse;
 }
 
+.tableContainer table caption {
+  text-align: right;
+  padding: 10px;
+  font-weight: bold;
+}
+
 .tableContainer table th,
 .tableContainer table td:first-child {
   background: #c6e5ed;
   color: var(--main-text-color);
   padding: 10px 10px;
+  text-transform: uppercase;
 }
 .tableContainer table th,
 .tableContainer table td {
@@ -63,6 +70,7 @@
 @media screen and (max-width: 480px) {
   .tableContainer table {
     font-size: 12px;
+    font-weight: bold;
   }
 
   .tableContainer table th,
