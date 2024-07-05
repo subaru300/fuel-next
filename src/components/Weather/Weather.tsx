@@ -12,12 +12,12 @@ import { useEffect, useRef, useState } from 'react';
 const Weather = () => {
   const [city, setCity] = useState('Kiev');
   const [image, setImage] = useState(clear);
-  const enteredCityRef = useRef(null);
+  const enteredCityRef = useRef<HTMLInputElement>(null);
   const { data, error, isLoading, isSuccess, refetch } =
     useGetWeatherByCityQuery(city.toLowerCase());
 
   const onSearchHandler = () => {
-    if (!enteredCityRef) return;
+    if (!enteredCityRef.current) return;
     const city = enteredCityRef.current.value;
     setCity(city);
 
@@ -38,7 +38,7 @@ const Weather = () => {
         setImage(mist);
         break;
       default:
-        image.src = '';
+        setImage(clear);
     }
   };
 
