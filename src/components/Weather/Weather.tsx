@@ -1,13 +1,13 @@
 'use client';
 
+import { useRef, useState } from 'react';
+import { useGetWeatherByCityQuery } from '@/services/weather';
 import { FaSearch } from 'react-icons/fa';
 import { FiWind } from 'react-icons/fi';
 import { WiHumidity } from 'react-icons/wi';
-import Image from 'next/image';
 import { clear, cloud, mist, rain, snow } from '@/images/weather';
-import { useGetWeatherByCityQuery } from '@/services/weather';
+import Image from 'next/image';
 import styles from './Weather.module.css';
-import { useEffect, useRef, useState } from 'react';
 
 const Weather = () => {
   const [city, setCity] = useState('Kiev');

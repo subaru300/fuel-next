@@ -71,10 +71,6 @@
 
 @media screen and (max-width: 500px) {
   .weatherContainer {
-    width: 380px;
-  }
-
-  .search {
-    width: 100%;
+    width: 250px;
   }
 }
