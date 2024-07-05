@@ -1,3 +1,5 @@
+import { BsFuelPumpFill } from 'react-icons/bs';
+import { GiReceiveMoney } from 'react-icons/gi';
 import styles from './Tabs.module.css';
 
 interface Props {
@@ -6,8 +8,12 @@ interface Props {
 }
 
 const tabs = [
-  { name: 'Required and cost', label: 'Required and cost' },
-  { name: 'Сonsumption', label: 'Сonsumption' },
+  {
+    name: 'Required and cost',
+    label: 'Required and cost',
+    icon: <GiReceiveMoney />,
+  },
+  { name: 'Сonsumption', label: 'Сonsumption', icon: <BsFuelPumpFill /> },
 ];
 
 const Tabs = ({ active, onTabSelect }: Props) => {
@@ -20,6 +26,7 @@ const Tabs = ({ active, onTabSelect }: Props) => {
           type='button'
           onClick={() => onTabSelect(btn.name)}
         >
+          {btn.icon}
           {btn.label}
         </button>
       ))}

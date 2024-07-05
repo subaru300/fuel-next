@@ -58,7 +58,7 @@ const Table = () => {
               <tr>
                 <th>Date</th>
                 <th>Distance</th>
-                <th>Consumprion</th>
+                <th>Consumption</th>
                 <th>Cost 1l</th>
                 <th>Required fuel</th>
                 <th>Ride cost</th>

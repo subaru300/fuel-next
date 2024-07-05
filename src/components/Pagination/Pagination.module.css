@@ -22,4 +22,5 @@
   width: 20px;
   height: 20px;
   color: var(--basic-text-color);
+  cursor: pointer;
 }

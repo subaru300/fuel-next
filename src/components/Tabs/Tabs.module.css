@@ -1,3 +1,8 @@
+.calcButtons {
+  display: flex;
+  flex-direction: row;
+}
+
 .calcButtons button {
   width: 200px;
   height: 50px;
@@ -6,6 +11,10 @@
   color: #484451;
   background-color: var(--input-color);
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .calcButtons button:hover {
@@ -18,12 +27,6 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
-  .calcButtons {
-    margin-left: 5px;
-  }
-}
-
 @media (max-width: 980px) {
   .calcButtons button:hover {
     background-color: #c6e5ed;
@@ -31,5 +34,13 @@
 
   .calcButtons button {
     width: 150px;
+    gap: 3px;
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .calcButtons {
+    margin-left: 5px;
   }
 }
