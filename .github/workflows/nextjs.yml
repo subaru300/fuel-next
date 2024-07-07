@@ -76,7 +76,8 @@ jobs:
       - name: Build with Next.js
 
         run: |
-          echo "NEXT_PUBLIC_OPENWEATHERMAP_API_KEY=${{ secrets.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY }}" >> .env.local 
+          echo "NEXT_PUBLIC_OPENWEATHERMAP_API_KEY=${{ secrets.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY }}" >> .env.local
+          echo "NEXT_PUBLIC_EXCHANGERATE_API_KEY=${{ secrets.NEXT_PUBLIC_EXCHANGERATE_API_KEY }}" >> .env.local 
           ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
