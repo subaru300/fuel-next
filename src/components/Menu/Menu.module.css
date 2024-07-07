@@ -1,0 +1,9 @@
+.headerNav ul li {
+  display: flex;
+  gap: 10px;
+}
+
+.headerNav a {
+  text-decoration: none;
+  color: var(--basic-text-color);
+}

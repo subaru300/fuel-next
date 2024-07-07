@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import logo from '@/images/fuel.png';
-import Link from 'next/link';
+import Menu from '../Menu/Menu';
 import styles from '@/components/Header/Header.module.css';
 
 const Header = () => {
@@ -13,16 +13,7 @@ const Header = () => {
           <p>.ride cost and stats</p>
         </div>
       </div>
-
-      <nav className={styles.headerNav}>
-        <ul>
-          <li>
-            <Link href='/statistic'>Statistic</Link>
-            <Link href='/about'>About</Link>
-            <Link href='/other'>Other</Link>
-          </li>
-        </ul>
-      </nav>
+      <Menu />
     </header>
   );
 };

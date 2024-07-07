@@ -1,10 +1,13 @@
-.footer {
+.statisticPageContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   align-items: center;
   justify-content: center;
-  min-height: 150px;
-  background-color: var(--bg-color);
   color: var(--basic-text-color);
+  margin: 200px auto;
+}
+
+.statisticPageContainer a {
+  margin-top: 20px;
+  color: blueviolet;
 }

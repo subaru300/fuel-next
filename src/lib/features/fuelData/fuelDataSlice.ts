@@ -6,29 +6,11 @@ const initialState: IEnteredData[] = [
   {
     id: '1',
     date: 'test',
-    distance: 320,
-    consumption: 6.5,
+    distance: 236,
+    consumption: 6.8,
     cost: 59,
-    reqFuel: 999,
-    costFuel: 999,
-  },
-  {
-    id: '2',
-    date: 'test',
-    distance: 320,
-    consumption: 6.5,
-    cost: 59,
-    reqFuel: 999,
-    costFuel: 999,
-  },
-  {
-    id: '3',
-    date: 'test',
-    distance: 320,
-    consumption: 6.5,
-    cost: 59,
-    reqFuel: 999,
-    costFuel: 999,
+    reqFuel: 1,
+    costFuel: 1,
   },
 ];
 

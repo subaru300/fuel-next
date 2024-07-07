@@ -1,15 +1,20 @@
 import { configureStore } from '@reduxjs/toolkit';
 import fuelDataReducer from './features/fuelData/fuelDataSlice';
 import { weatherApi } from '@/services/weather';
+import { currencyApi } from '@/services/currency';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       fuelData: fuelDataReducer,
       [weatherApi.reducerPath]: weatherApi.reducer,
+      [currencyApi.reducerPath]: currencyApi.reducer,
     },
     middleware: getDefaultMiddleware =>
-      getDefaultMiddleware().concat(weatherApi.middleware),
+      getDefaultMiddleware().concat(
+        weatherApi.middleware,
+        currencyApi.middleware
+      ),
   });
 };
 

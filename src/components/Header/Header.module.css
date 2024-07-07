@@ -23,16 +23,6 @@
   font-size: 24px;
 }
 
-.headerNav ul li {
-  display: flex;
-  gap: 10px;
-}
-
-.headerNav a {
-  text-decoration: none;
-  color: var(--basic-text-color);
-}
-
 @media screen and (max-width: 480px) {
   .headerTextBlock h1 {
     font-size: 18px;
